@@ -26,4 +26,5 @@ request.addEventListener('load', function () {
             }</p>
           </div>
         </article>`;
+  countriesContainer.insertAdjacentHTML('beforeend', html);
 });
