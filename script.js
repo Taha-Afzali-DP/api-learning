@@ -20,7 +20,7 @@ request.addEventListener('load', function () {
             <p class="country__row"><span>👫</span>${+(
               data.population / 1000000
             ).toFixed(1)}</p>
-            <p class="country__row"><span>🗣️</span>${data.languages}</p>
+            <p class="country__row"><span>🗣️</span>${data.languages[0].name}</p>
             <p class="country__row"><span>💰</span>CUR</p>
           </div>
         </article>`;
