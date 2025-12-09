@@ -67,6 +67,7 @@ const getCountryDataAndNeighbour = function (country) {
     renderCountry(data);
     //! *** Get neighbour country ::
     const [neighbours] = data.borders;
+    if (!neighbours) return;
   });
 };
 // getCountryData('germany');
