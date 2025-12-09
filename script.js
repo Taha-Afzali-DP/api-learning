@@ -56,25 +56,27 @@ const renderCountry = function (data) {
   countriesContainer.style.opacity = 1;
 };
 const getCountryDataAndNeighbour = function (country) {
-  //! Ajax Call country 1::
   const request = new XMLHttpRequest();
   request.open('GET', `https://restcountries.com/v3.1/name/${country}`);
   request.send();
-  request.addEventListener('load', function () {
-    const [data] = JSON.parse(this.responseText); // destructuring آرایه
-    //!render country ::
 
+  request.addEventListener('load', function () {
+    const [data] = JSON.parse(this.responseText);
     renderCountry(data);
-    //! *** Get neighbour country ::
-    const [neighbours] = data.borders;
-    if (!neighbours) return;
-    //! Ajax Call neighbour's country ::
-    const request2 = new XMLHttpRequest();
-    request2.open('GET', `https://restcountries.com/v3.1/alpha/${neighbours}`);
-    request2.send();
-    request2.addEventListener('load', function () {
-      const data2 = JSON.parse(this.responseText);
-      console.log(data2);
+
+    const neighbours = data.borders;
+
+    if (!neighbours || neighbours.length === 0) return;
+
+    neighbours.forEach(neighbour => {
+      const request2 = new XMLHttpRequest();
+      request2.open('GET', `https://restcountries.com/v3.1/alpha/${neighbour}`);
+      request2.send();
+
+      request2.addEventListener('load', function () {
+        const [data2] = JSON.parse(this.responseText);
+        renderCountry(data2);
+      });
     });
   });
 };
