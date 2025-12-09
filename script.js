@@ -34,3 +34,6 @@ const getCountryData = function (country) {
 };
 
 getCountryData('germany');
+getCountryData('portugal');
+// getCountryData('usa');
+getCountryData('iran');
