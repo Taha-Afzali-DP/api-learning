@@ -68,6 +68,13 @@ const getCountryDataAndNeighbour = function (country) {
     //! *** Get neighbour country ::
     const [neighbours] = data.borders;
     if (!neighbours) return;
+    //! Ajax Call neighbour's country ::
+    const request2 = new XMLHttpRequest();
+    request2.open('GET', `https://restcountries.com/v3.1/alpha/${neighbours}`);
+    request2.send();
+    request2.addEventListener('load', function () {
+      const [data] = JSON.parse(this.responseText); //
+    });
   });
 };
 // getCountryData('germany');
