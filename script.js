@@ -34,9 +34,9 @@ const countriesContainer = document.querySelector('.countries');
 // };
 
 //TODO *** new ppart ***
-const renderCountry = function (data) {
+const renderCountry = function (data, className = '') {
   const html = `
-      <article class="country">
+      <article class="country ${className}">
         <img class="country__img" src="${data.flags.svg}" />
         <div class="country__data">
           <h3 class="country__name">${data.name.common}</h3>
@@ -75,7 +75,7 @@ const getCountryDataAndNeighbour = function (country) {
 
       request2.addEventListener('load', function () {
         const [data2] = JSON.parse(this.responseText);
-        renderCountry(data2);
+        renderCountry(data2, 'neighbour');
       });
     });
   });
@@ -83,4 +83,4 @@ const getCountryDataAndNeighbour = function (country) {
 // getCountryData('germany');
 getCountryDataAndNeighbour('portugal');
 // getCountryData('usa');
-getCountryDataAndNeighbour('iran');
+// getCountryDataAndNeighbour('iran');
