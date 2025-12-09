@@ -80,7 +80,7 @@ const getCountryDataAndNeighbour = function (country) {
     });
   });
 };
-// getCountryData('germany');
+// getCountryDataAndNeighbour('germany');
 getCountryDataAndNeighbour('portugal');
-// getCountryData('usa');
+// getCountryDataAndNeighbour('usa');
 // getCountryDataAndNeighbour('iran');
