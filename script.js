@@ -38,15 +38,8 @@ getCountryData('portugal');
 // getCountryData('usa');
 getCountryData('iran');
 //TODO *** new ppart ***
-const getCountryDataAndNeighbour = function (country) {
-  const request = new XMLHttpRequest();
-  request.open('GET', `https://restcountries.com/v3.1/name/${country}`);
-  request.send();
-  request.addEventListener('load', function () {
-    const [data] = JSON.parse(this.responseText); // destructuring آرایه
-    console.log(data);
-
-    const html = `
+const renderCountry = function (data) {
+  const html = `
       <article class="country">
         <img class="country__img" src="${data.flags.svg}" />
         <div class="country__data">
@@ -63,6 +56,15 @@ const getCountryDataAndNeighbour = function (country) {
           }</p>
         </div>
       </article>`;
+};
+const getCountryDataAndNeighbour = function (country) {
+  const request = new XMLHttpRequest();
+  request.open('GET', `https://restcountries.com/v3.1/name/${country}`);
+  request.send();
+  request.addEventListener('load', function () {
+    const [data] = JSON.parse(this.responseText); // destructuring آرایه
+    console.log(data);
+
     countriesContainer.insertAdjacentHTML('beforeend', html);
     countriesContainer.style.opacity = 1;
   });
