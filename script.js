@@ -56,12 +56,14 @@ const renderCountry = function (data) {
   countriesContainer.style.opacity = 1;
 };
 const getCountryDataAndNeighbour = function (country) {
+  //! Ajax Call country 1::
   const request = new XMLHttpRequest();
   request.open('GET', `https://restcountries.com/v3.1/name/${country}`);
   request.send();
   request.addEventListener('load', function () {
     const [data] = JSON.parse(this.responseText); // destructuring آرایه
-    console.log(data);
+    //!render country ::
+
     renderCountry(data);
     //! *** Get neighbour country ::
   });
