@@ -52,6 +52,7 @@ const renderCountry = function (data) {
           }</p>
         </div>
       </article>`;
+  countriesContainer.insertAdjacentHTML('beforeend', html);
 };
 const getCountryDataAndNeighbour = function (country) {
   const request = new XMLHttpRequest();
@@ -61,11 +62,11 @@ const getCountryDataAndNeighbour = function (country) {
     const [data] = JSON.parse(this.responseText); // destructuring آرایه
     console.log(data);
     renderCountry(data);
-    countriesContainer.insertAdjacentHTML('beforeend', html);
+
     countriesContainer.style.opacity = 1;
   });
 };
 // getCountryData('germany');
-getCountryData('portugal');
+getCountryDataAndNeighbour('portugal');
 // getCountryData('usa');
-getCountryData('iran');
+getCountryDataAndNeighbour('iran');
