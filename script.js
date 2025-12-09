@@ -37,7 +37,7 @@ const getCountryData = function (country) {
 getCountryData('portugal');
 // getCountryData('usa');
 getCountryData('iran');
-
+//TODO *** new ppart ***
 const getCountryDataAndNeighbour = function (country) {
   const request = new XMLHttpRequest();
   request.open('GET', `https://restcountries.com/v3.1/name/${country}`);
