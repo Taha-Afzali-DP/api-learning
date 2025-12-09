@@ -73,8 +73,8 @@ const getCountryDataAndNeighbour = function (country) {
     request2.open('GET', `https://restcountries.com/v3.1/alpha/${neighbours}`);
     request2.send();
     request2.addEventListener('load', function () {
-      console.log(this.responseText);
-      const [data2] = JSON.parse(this.responseText); //
+      const data2 = JSON.parse(this.responseText);
+      console.log(data2);
     });
   });
 };
