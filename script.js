@@ -63,6 +63,7 @@ const getCountryDataAndNeighbour = function (country) {
     const [data] = JSON.parse(this.responseText); // destructuring آرایه
     console.log(data);
     renderCountry(data);
+    //! *** Get neighbour country ::
   });
 };
 // getCountryData('germany');
