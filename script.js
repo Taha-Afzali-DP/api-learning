@@ -53,6 +53,7 @@ const renderCountry = function (data) {
         </div>
       </article>`;
   countriesContainer.insertAdjacentHTML('beforeend', html);
+  countriesContainer.style.opacity = 1;
 };
 const getCountryDataAndNeighbour = function (country) {
   const request = new XMLHttpRequest();
@@ -62,8 +63,6 @@ const getCountryDataAndNeighbour = function (country) {
     const [data] = JSON.parse(this.responseText); // destructuring آرایه
     console.log(data);
     renderCountry(data);
-
-    countriesContainer.style.opacity = 1;
   });
 };
 // getCountryData('germany');
