@@ -90,5 +90,7 @@ getCountryDataAndNeighbour('portugal');
 const req = fetch('https://restcountries.com/v3.1/name/iran');
 console.log(req);
 const getCountryData = function (country) {
-  fetch(`https://restcountries.com/v3.1/name/${country}`);
+  fetch(`https://restcountries.com/v3.1/name/${country}`).then(function (
+    respponse
+  ) {});
 };
