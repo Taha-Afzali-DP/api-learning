@@ -105,7 +105,8 @@ const getCountryData = function (country) {
     .then(response => response.json())
     .then(data => {
       renderCountry(data[0]);
-      const neighbour = 1;
+      const neighbour = data[0].borders[0];
+      if (!neighbour) return;
     });
 };
 getCountryData('portugal');
