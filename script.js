@@ -84,3 +84,5 @@ const getCountryDataAndNeighbour = function (country) {
 getCountryDataAndNeighbour('portugal');
 // getCountryDataAndNeighbour('usa');
 // getCountryDataAndNeighbour('iran');
+const req = fetch('https://restcountries.com/v3.1/name/iran');
+console.log(req);
