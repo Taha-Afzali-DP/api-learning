@@ -96,3 +96,4 @@ const getCountryData = function (country) {
     console.log(respponse);
   });
 };
+getCountryData('iran');
