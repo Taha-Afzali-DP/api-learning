@@ -55,6 +55,7 @@ const renderCountry = function (data, className = '') {
   countriesContainer.insertAdjacentHTML('beforeend', html);
   countriesContainer.style.opacity = 1;
 };
+/*
 const getCountryDataAndNeighbour = function (country) {
   const request = new XMLHttpRequest();
   request.open('GET', `https://restcountries.com/v3.1/name/${country}`);
@@ -84,5 +85,7 @@ const getCountryDataAndNeighbour = function (country) {
 getCountryDataAndNeighbour('portugal');
 // getCountryDataAndNeighbour('usa');
 // getCountryDataAndNeighbour('iran');
+*/
+//TODO *** fetch ***
 const req = fetch('https://restcountries.com/v3.1/name/iran');
 console.log(req);
