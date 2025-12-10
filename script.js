@@ -103,7 +103,10 @@ console.log(req);
 const getCountryData = function (country) {
   fetch(`https://restcountries.com/v3.1/name/${country}`)
     .then(response => response.json())
-    .then(data => renderCountry(data[0]));
+    .then(data => {
+      renderCountry(data[0]);
+      const neighbour = 1;
+    });
 };
 getCountryData('portugal');
 getCountryData('iran');
