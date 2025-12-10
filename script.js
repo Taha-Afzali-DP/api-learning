@@ -107,6 +107,9 @@ const getCountryData = function (country) {
       renderCountry(data[0]);
       const neighbour = data[0].borders[0];
       if (!neighbour) return;
+      fetch(`https://restcountries.com/v3.1/alpha/${neighbour}`)
+        .then(response2 => response2.json())
+        .then(data2 => renderCountry(data2));
     });
 };
 getCountryData('portugal');
