@@ -113,4 +113,4 @@ const getCountryData = function (country) {
     });
 };
 getCountryData('portugal');
-getCountryData('iran');
+// getCountryData('iran');
