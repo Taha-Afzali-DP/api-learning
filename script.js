@@ -103,20 +103,14 @@ console.log(req);
 const getCountryData = function (country) {
   //! //country 1\\
   fetch(`https://restcountries.com/v3.1/name/${country}`)
-    .then(
-      response => response.json(),
-      err => alert(err)
-    )
+    .then(response => response.json())
     .then(data => {
       renderCountry(data[0]);
       //! //country 2\\
       const neighbour = data[0].borders[0];
       if (!neighbour) return;
       return fetch(`https://restcountries.com/v3.1/alpha/${neighbour}`)
-        .then(
-          response2 => response2.json(),
-          err => alert(err)
-        )
+        .then(response2 => response2.json())
         .then(data2 => renderCountry(data2[0], 'neighbour'));
     });
 };
