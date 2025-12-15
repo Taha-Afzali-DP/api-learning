@@ -100,6 +100,7 @@ console.log(req);
 //       renderCountry(data[0]);
 //     });
 // };
+const renderError = err => console.error(`${err} ⛔🛑‼️`);
 const getCountryData = function (country) {
   //! //country 1\\
   fetch(`https://restcountries.com/v3.1/name/${country}`)
@@ -113,7 +114,7 @@ const getCountryData = function (country) {
     })
     .then(response2 => response2.json())
     .then(data2 => renderCountry(data2[0], 'neighbour'))
-    .catch(err => console.error(`${err} ⛔🛑‼️`));
+    .catch(renderError());
 };
 btn.addEventListener('click', function () {
   getCountryData('portugal');
