@@ -119,10 +119,10 @@ const getCountryData = function (country) {
     })
     .then(response2 => response2.json())
     .then(data2 => renderCountry(data2[0], 'neighbour'))
-    .catch(
-      err => console.error(`${err} ⛔🛑‼️`),
-      renderError(`somthing went worng ‼️`)
-    );
+    .catch(err => {
+      console.error(`${err} ⛔🛑‼️`);
+      renderError(`somthing went worng ‼️`);
+    });
 };
 btn.addEventListener('click', function () {
   getCountryData('portugal');
