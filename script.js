@@ -113,7 +113,7 @@ const getCountryData = function (country) {
     })
     .then(response2 => response2.json())
     .then(data2 => renderCountry(data2[0], 'neighbour'))
-    .catch(err => alert(err));
+    .catch(err => console.log(`${err} ⛔🛑‼️`));
 };
 btn.addEventListener('click', function () {
   getCountryData('portugal');
