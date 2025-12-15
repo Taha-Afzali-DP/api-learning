@@ -114,5 +114,6 @@ const getCountryData = function (country) {
         .then(data2 => renderCountry(data2[0], 'neighbour'));
     });
 };
+btn.addEventListener('click', function () {});
 getCountryData('portugal');
 // getCountryData('iran');
