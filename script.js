@@ -131,3 +131,4 @@ btn.addEventListener('click', function () {
   getCountryData('portugal');
 });
 // getCountryData('iran');
+// getCountryData('cvfsz');
