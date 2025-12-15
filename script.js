@@ -53,12 +53,12 @@ const renderCountry = function (data, className = '') {
         </div>
       </article>`;
   countriesContainer.insertAdjacentHTML('beforeend', html);
-  countriesContainer.style.opacity = 1;
+  // countriesContainer.style.opacity = 1;
 };
 //TODO ***render cuontry***
 const renderError = function (msg) {
   countriesContainer.insertAdjacentText('beforeend', msg);
-  countriesContainer.style.opacity = 1;
+  // countriesContainer.style.opacity = 1;
 };
 /*
 const getCountryDataAndNeighbour = function (country) {
@@ -122,6 +122,9 @@ const getCountryData = function (country) {
     .catch(err => {
       console.error(`${err} ⛔🛑‼️`);
       renderError(`somthing went worng ‼️${err.message}.try again!`);
+    })
+    .finally(() => {
+      countriesContainer.style.opacity = 1;
     });
 };
 btn.addEventListener('click', function () {
