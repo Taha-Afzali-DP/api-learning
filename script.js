@@ -55,6 +55,7 @@ const renderCountry = function (data, className = '') {
   countriesContainer.insertAdjacentHTML('beforeend', html);
   countriesContainer.style.opacity = 1;
 };
+//TODO ***render cuontry***
 /*
 const getCountryDataAndNeighbour = function (country) {
   const request = new XMLHttpRequest();
@@ -100,10 +101,7 @@ console.log(req);
 //       renderCountry(data[0]);
 //     });
 // };
-const renderError = function (msg) {
-  countriesContainer.insertAdjacentText('beforeend', msg);
-  countriesContainer.style.opacity = 1;
-};
+
 const getCountryData = function (country) {
   //! //country 1\\
   fetch(`https://restcountries.com/v3.1/name/${country}`)
