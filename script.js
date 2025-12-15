@@ -101,7 +101,7 @@ console.log(req);
 //     });
 // };
 const renderError = function (msg) {
-  countriesContainer.insertAdjacentText();
+  countriesContainer.insertAdjacentText('beforeend', msg);
 };
 const getCountryData = function (country) {
   //! //country 1\\
