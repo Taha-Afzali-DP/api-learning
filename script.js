@@ -121,7 +121,7 @@ const getCountryData = function (country) {
     .then(data2 => renderCountry(data2[0], 'neighbour'))
     .catch(err => {
       console.error(`${err} ⛔🛑‼️`);
-      renderError(`somthing went worng ‼️${err.message}.try again`);
+      renderError(`somthing went worng ‼️${err.message}.try again!`);
     });
 };
 btn.addEventListener('click', function () {
