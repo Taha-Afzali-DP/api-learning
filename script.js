@@ -56,6 +56,10 @@ const renderCountry = function (data, className = '') {
   countriesContainer.style.opacity = 1;
 };
 //TODO ***render cuontry***
+const renderError = function (msg) {
+  countriesContainer.insertAdjacentText('beforeend', msg);
+  countriesContainer.style.opacity = 1;
+};
 /*
 const getCountryDataAndNeighbour = function (country) {
   const request = new XMLHttpRequest();
