@@ -118,7 +118,8 @@ const getCountryData = function (country) {
     .then(data => {
       renderCountry(data[0]);
       //! //country 2\\
-      const neighbour = data[0].borders[0];
+      // const neighbour = data[0].borders[0];
+      const neighbour = 'fgdhdtj';
       if (!neighbour) return;
       return fetch(`https://restcountries.com/v3.1/alpha/${neighbour}`);
     })
