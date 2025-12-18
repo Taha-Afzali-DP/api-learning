@@ -118,10 +118,10 @@ const getCountryData = function (country) {
   getJSON(
     `https://restcountries.com/v3.1/name/${country}`,
     'Country not found'
-  ).then(data => {
-    renderCountry(data[0]);
+  ).then(data1 => {
+    renderCountry(data1[0]);
     //! //country 2\\
-    const neighbour = data[0].borders[0];
+    const neighbour = data1[0].borders[0];
     if (!neighbour) throw new Error('no neighbour found!');
     console.log(neighbour);
     return getJSON(
