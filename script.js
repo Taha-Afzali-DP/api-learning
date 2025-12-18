@@ -124,7 +124,7 @@ const getCountryData = function (country) {
     })
     .then(response2 => {
       if (!response2.ok) {
-        throw new Error(`Country not found ${response.status}`);
+        throw new Error(`Country not found ${response2.status}`);
       }
       return response2.json();
     })
