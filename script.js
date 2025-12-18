@@ -105,7 +105,9 @@ console.log(req);
 //       renderCountry(data[0]);
 //     });
 // };
-
+const getJSON = function (url) {
+  fetch(url).then();
+};
 const getCountryData = function (country) {
   //! //country 1\\
   fetch(`https://restcountries.com/v3.1/name/${country}`)
