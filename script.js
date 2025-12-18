@@ -109,7 +109,12 @@ console.log(req);
 const getCountryData = function (country) {
   //! //country 1\\
   fetch(`https://restcountries.com/v3.1/name/${country}`)
-    .then(response => response.json())
+    .then(response => {
+      response.json();
+      if (!response.ok) {
+        throw new Error(`Country not found ${response}`);
+      }
+    })
     .then(data => {
       renderCountry(data[0]);
       //! //country 2\\
@@ -128,7 +133,7 @@ const getCountryData = function (country) {
     });
 };
 btn.addEventListener('click', function () {
-  getCountryData('portugal');
+  // getCountryData('portugal');
+  getCountryData('cvfsz');
 });
 // getCountryData('iran');
-// getCountryData('cvfsz');
