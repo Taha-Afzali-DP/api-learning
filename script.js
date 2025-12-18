@@ -115,13 +115,7 @@ const getJSON = function (url, errMsg = 'somthing went worng') {
 };
 const getCountryData = function (country) {
   //! //country 1\\
-  fetch(`https://restcountries.com/v3.1/name/${country}`)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Country not found ${response.status}`);
-      }
-      return response.json();
-    })
+  getJSON(`https://restcountries.com/v3.1/name/${country}`, 'Country not found')
     .then(data => {
       renderCountry(data[0]);
       //! //country 2\\
