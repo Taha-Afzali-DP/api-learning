@@ -121,8 +121,8 @@ const getCountryData = function (country) {
   ).then(data => {
     renderCountry(data[0]);
     //! //country 2\\
-    // const neighbour = data[0].borders[0];
-    const neighbour = 'fgdhdtj';
+    const neighbour = data[0].borders[0];
+    // const neighbour = 'fgdhdtj';
     if (!neighbour)
       throw new Error(`This Country don't have a neighbour‼️‼️‼️`);
     return getJSON(
@@ -144,4 +144,4 @@ btn.addEventListener('click', function () {
   // getCountryData('cvfsz');
 });
 
-// getCountryData('iran')
+getCountryData('australia');
