@@ -138,7 +138,7 @@ const getCountryData = function (country) {
     });
 };
 btn.addEventListener('click', function () {
-  // getCountryData('portugal');
-  getCountryData('cvfsz');
+  getCountryData('portugal');
+  // getCountryData('cvfsz');
 });
 // getCountryData('iran');
