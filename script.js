@@ -106,7 +106,12 @@ console.log(req);
 //     });
 // };
 const getJSON = function (url) {
-  fetch(url).then();
+  fetch(url).then(response => {
+    if (!response.ok) {
+      throw new Error(`Country not found ${response.status}`);
+    }
+    return response.json();
+  });
 };
 const getCountryData = function (country) {
   //! //country 1\\
