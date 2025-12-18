@@ -108,7 +108,7 @@ console.log(req);
 const getJSON = function (url, errMsg = 'somthing went worng') {
   fetch(url).then(response => {
     if (!response.ok) {
-      throw new Error(errMsg);
+      throw new Error(`${errMsg} ${response.status}`);
     }
     return response.json();
   });
