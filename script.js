@@ -123,7 +123,7 @@ const getCountryData = function (country) {
     //! //country 2\\
     // const neighbour = data[0].borders[0];
     const neighbour = 'fgdhdtj';
-    if (!neighbour) return;
+    if (!neighbour) throw new Error(`This Country don't have a neighbour`);
     return getJSON(
       `https://restcountries.com/v3.1/alpha/${neighbour}`,
       'Country not found'
