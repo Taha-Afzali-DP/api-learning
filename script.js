@@ -123,7 +123,7 @@ const getCountryData = function (country) {
       return fetch(`https://restcountries.com/v3.1/alpha/${neighbour}`);
     })
     .then(response2 => {
-      if (!response.ok) {
+      if (!response2.ok) {
         throw new Error(`Country not found ${response.status}`);
       }
       return response2.json();
