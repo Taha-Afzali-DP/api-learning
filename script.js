@@ -110,10 +110,10 @@ const getCountryData = function (country) {
   //! //country 1\\
   fetch(`https://restcountries.com/v3.1/name/${country}`)
     .then(response => {
-      response.json();
       if (!response.ok) {
         throw new Error(`Country not found ${response.status}`);
       }
+      return response.json();
     })
     .then(data => {
       renderCountry(data[0]);
