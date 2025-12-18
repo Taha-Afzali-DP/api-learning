@@ -105,7 +105,7 @@ console.log(req);
 //       renderCountry(data[0]);
 //     });
 // };
-const getJSON = function (url) {
+const getJSON = function (url, errMfg = 'somthing went worng') {
   fetch(url).then(response => {
     if (!response.ok) {
       throw new Error(`Country not found ${response.status}`);
