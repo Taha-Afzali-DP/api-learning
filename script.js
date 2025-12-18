@@ -122,7 +122,12 @@ const getCountryData = function (country) {
       if (!neighbour) return;
       return fetch(`https://restcountries.com/v3.1/alpha/${neighbour}`);
     })
-    .then(response2 => response2.json())
+    .then(response2 => {
+      if (!response.ok) {
+        throw new Error(`Country not found ${response.status}`);
+      }
+      return response2.json();
+    })
     .then(data2 => renderCountry(data2[0], 'neighbour'))
     .catch(err => {
       console.error(`${err} ⛔🛑‼️`);
