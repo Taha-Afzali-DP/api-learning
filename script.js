@@ -182,7 +182,7 @@ const whereAmI = function (lat, lng) {
     .then(data => {
       console.log(data);
       console.log(`you are in ${data.city} in ${data.country}`);
-      return fetch(`https://restcountries.com/v3.1/name/${country}`);
+      return fetch(`https://restcountries.com/v3.1/name/${data.country}`);
     })
     .then(response => {
       if (!response.ok) {
@@ -191,7 +191,7 @@ const whereAmI = function (lat, lng) {
       return response.json();
     })
     .then(data => {
-      renderCountry(data);
+      renderCountry(data[0]);
     })
     .catch(err => console.error(`${err.message}oppsss...TRY_AGAIN`));
 };
