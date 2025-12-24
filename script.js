@@ -172,7 +172,10 @@ const whereAmI = function (lat, lng) {
     .then(data => {
       renderCountry(data[0]);
     })
-    .catch(err => console.error(`${err.message}oppsss...TRY_AGAIN`));
+    .catch(err => console.error(`${err.message}oppsss...TRY_AGAIN`))
+    .finally(() => {
+      countriesContainer.style.opacity = 1;
+    });
 };
 console.log(whereAmI(52.508, 13.381));
 console.log(whereAmI(30.28211, 57.03559));
