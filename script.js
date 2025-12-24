@@ -180,6 +180,9 @@ const whereAmI = function (lat, lng) {
 
       return response.json();
     })
-    .then(data => console.log(data));
+    .then(data => {
+      console.log(data);
+      console.log(`you are in ${data.city} in ${data.country}`);
+    });
 };
 console.log(whereAmI(52.508, 13.381));
