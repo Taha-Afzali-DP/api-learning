@@ -150,7 +150,14 @@ getCountryData('australia');
 //todo ***Coding Challange***
 const whereAmI = function (lng, lat) {
   return fetch(
-    `https://geocode.xyz/${lng},${lat}?geoit=json&auth=74488022537145152005x25148`
-  ).then(response => response.json());
+    `https://geocode.xyz/${lat},${lng}?geoit=json&auth=74488022537145152005x25148`
+  )
+    .then(response => {
+      if (!response.ok)
+        throw new Error(`opppsss we have a problem .${response.status}`);
+
+      return response.json();
+    })
+    .then(data => console.log(`${data.city}`));
 };
-console.log(whereAmI(51.50354, -0.12768));
+console.log(whereAmI(-0.12768, 51.50354));
