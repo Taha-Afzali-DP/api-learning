@@ -138,7 +138,7 @@ const getCountryData = function (country) {
       });
   });
 };
-btn.addEventListener('click', function (lng, lat) {
+btn.addEventListener('click', function () {
   getCountryData('portugal');
   // getCountryData('cvfsz');
 });
@@ -148,4 +148,9 @@ getCountryData('australia');
 
 //! API-KEY: 74488022537145152005x25148
 //todo ***Coding Challange***
-const whereAmI = function () {};
+const whereAmI = function (lng, lat) {
+  const country = fetch(
+    `https://geocode.xyz/${lng},${lat}?geoit=xml&auth=74488022537145152005x25148`
+  );
+  console.log(country);
+};
