@@ -138,7 +138,7 @@ const getCountryData = function (country) {
       });
   });
 };
-btn.addEventListener('click', function () {
+btn.addEventListener('click', function (lng, lat) {
   getCountryData('portugal');
   // getCountryData('cvfsz');
 });
