@@ -148,7 +148,29 @@ getCountryData('australia');
 
 //! API-KEY: 74488022537145152005x25148
 //todo ***Coding Challange***
-const whereAmI = function (lng, lat) {
+const renderCountry2 = function (data, className = '') {
+  const html = `
+      <article class="country ${className}">
+        <img class="country__img" src="${data.flags.svg}" />
+        <div class="country__data">
+          <h3 class="country__name">${data.name.common}</h3>
+          <h4 class="country__region">${data.region}</h4>
+          <p class="country__row"><span>👫</span>${(
+            +data.population / 1000000
+          ).toFixed(1)} million</p>
+          <p class="country__row"><span>🗣️</span>${
+            Object.values(data.languages)[0]
+          }</p>
+          <p class="country__row"><span>💰</span>${
+            Object.values(data.currencies)[0].name
+          }</p>
+        </div>
+      </article>`;
+  countriesContainer.insertAdjacentHTML('beforeend', html);
+  // countriesContainer.style.opacity = 1;
+};
+/////////
+const whereAmI = function (lat, lng) {
   return fetch(
     `https://geocode.xyz/${lat},${lng}?geoit=json&auth=74488022537145152005x25148`
   )
@@ -160,4 +182,4 @@ const whereAmI = function (lng, lat) {
     })
     .then(data => console.log(`${data.city}`));
 };
-console.log(whereAmI(-0.12768, 51.50354));
+console.log(whereAmI(52.508, 13.381));
