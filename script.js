@@ -175,8 +175,7 @@ const whereAmI = function (lat, lng) {
     `https://geocode.xyz/${lat},${lng}?geoit=json&auth=74488022537145152005x25148`
   )
     .then(response => {
-      if (!response.ok)
-        throw new Error(`opppsss we have a problem .${response.status}`);
+      if (!response.ok) throw new Error(`problem for API`);
 
       return response.json();
     })
@@ -186,3 +185,4 @@ const whereAmI = function (lat, lng) {
     });
 };
 console.log(whereAmI(52.508, 13.381));
+console.log(whereAmI(30.28211, 57.03559));
