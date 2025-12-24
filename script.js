@@ -146,3 +146,4 @@ btn.addEventListener('click', function () {
 getCountryData('australia');
 
 //todo ***Coding Challange***
+const whereAmI = function () {};
