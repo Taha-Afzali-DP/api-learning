@@ -175,7 +175,7 @@ const whereAmI = function (lat, lng) {
     `https://geocode.xyz/${lat},${lng}?geoit=json&auth=74488022537145152005x25148`
   )
     .then(response => {
-      if (!response.ok) throw new Error(`problem for API`);
+      if (!response.ok) throw new Error(`problem for API...${response.status}`);
 
       return response.json();
     })
