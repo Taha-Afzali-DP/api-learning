@@ -183,4 +183,7 @@ console.log(whereAmI(30.28211, 57.03559));
 console.log('test start');
 setTimeout(() => console.log('0 second time out'), 0);
 Promise.resolve('resolved promise 1 ').then(res => console.log(res));
+Promise.resolve('resolved promise 2 ').then(res => {
+  for (let i = 0; i < 1000000000; i++) console.log(res);
+});
 console.log('test end');
