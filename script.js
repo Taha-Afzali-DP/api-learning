@@ -184,6 +184,7 @@ console.log('test start');
 setTimeout(() => console.log('0 second time out'), 0);
 Promise.resolve('resolved promise 1 ').then(res => console.log(res));
 Promise.resolve('resolved promise 2 ').then(res => {
-  // for (let i = 0; i < 1000000000; i++) console.log(res){};
+  for (let i = 0; i < 1000000000; i++) {}
+  console.log(res);
 });
 console.log('test end');
