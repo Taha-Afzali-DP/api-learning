@@ -180,3 +180,4 @@ const whereAmI = function (lat, lng) {
 console.log(whereAmI(52.508, 13.381));
 console.log(whereAmI(30.28211, 57.03559));
 */
+console.log('test start');
