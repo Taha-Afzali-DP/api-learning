@@ -148,7 +148,7 @@ getCountryData('australia');
 
 //! API-KEY: 74488022537145152005x25148
 //todo ***Coding Challange***
-
+/*
 const whereAmI = function (lat, lng) {
   return fetch(
     `https://geocode.xyz/${lat},${lng}?geoit=json&auth=74488022537145152005x25148`
@@ -179,3 +179,4 @@ const whereAmI = function (lat, lng) {
 };
 console.log(whereAmI(52.508, 13.381));
 console.log(whereAmI(30.28211, 57.03559));
+*/
