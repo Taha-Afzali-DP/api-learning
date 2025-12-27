@@ -190,5 +190,9 @@ Promise.resolve('resolved promise 2 ').then(res => {
 console.log('test end');
 */
 //TODO *** bullding promise ***
-const lotteryPromise = new Promise(function (resolve, reject) {});
+const lotteryPromise = new Promise(function (resolve, reject) {
+  if (Math.random >= 0.5) {
+    resolve();
+  }
+});
 console.log(lotteryPromise);
