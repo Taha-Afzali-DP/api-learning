@@ -191,7 +191,7 @@ console.log('test end');
 */
 //TODO *** bullding promise ***
 const lotteryPromise = new Promise(function (resolve, reject) {
-  if (Math.random >= 0.5) {
+  if (Math.random() >= 0.5) {
     resolve('you WIN 💰🤑');
   } else {
     reject('you lost your money ‼️');
