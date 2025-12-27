@@ -195,4 +195,4 @@ const lotteryPromise = new Promise(function (resolve, reject) {
     resolve('you WIN 💰🤑');
   } else reject('you lost your money ‼️');
 });
-lotteryPromise.then(res => console.log(res));
+lotteryPromise.then(res => console.log(res)).catch(err => console.Error(err));
