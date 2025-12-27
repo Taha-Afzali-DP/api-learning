@@ -201,3 +201,5 @@ const lotteryPromise = new Promise(function (resolve, reject) {
   }, 2000);
 });
 lotteryPromise.then(res => console.log(res)).catch(err => console.Error(err));
+
+//TODO promisifying setTimeOut ::
