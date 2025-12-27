@@ -188,3 +188,5 @@ Promise.resolve('resolved promise 2 ').then(res => {
   console.log(res);
 });
 console.log('test end');
+
+//TODO *** bullding promise ***
