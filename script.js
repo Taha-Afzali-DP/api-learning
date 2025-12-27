@@ -190,3 +190,4 @@ Promise.resolve('resolved promise 2 ').then(res => {
 console.log('test end');
 
 //TODO *** bullding promise ***
+const lotteryPromise = new Promise(function (resolve, reject) {});
