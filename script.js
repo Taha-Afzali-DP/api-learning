@@ -216,4 +216,4 @@ waits(2)
   .then(() => console.log('I waited for 1 seconds'));
 
 Promise.resolve('abc').then(x => console.log(x));
-Promise.reject('abc').then(x => console.log(x));
+Promise.reject('abc').catch(x => console.err(x));
