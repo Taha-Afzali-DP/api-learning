@@ -191,3 +191,4 @@ console.log('test end');
 
 //TODO *** bullding promise ***
 const lotteryPromise = new Promise(function (resolve, reject) {});
+console.log(lotteryPromise);
