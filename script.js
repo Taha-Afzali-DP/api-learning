@@ -179,7 +179,7 @@ const whereAmI = function (lat, lng) {
 };
 console.log(whereAmI(52.508, 13.381));
 console.log(whereAmI(30.28211, 57.03559));
-*/
+
 console.log('test start');
 setTimeout(() => console.log('0 second time out'), 0);
 Promise.resolve('resolved promise 1 ').then(res => console.log(res));
@@ -188,7 +188,7 @@ Promise.resolve('resolved promise 2 ').then(res => {
   console.log(res);
 });
 console.log('test end');
-
+*/
 //TODO *** bullding promise ***
 const lotteryPromise = new Promise(function (resolve, reject) {});
 console.log(lotteryPromise);
