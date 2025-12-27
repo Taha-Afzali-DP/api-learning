@@ -208,4 +208,7 @@ const waits = function (seconds) {
     setTimeout(resolve, seconds * 1000);
   });
 };
-waits(2).then(() => console.log('I waited for 2 seconds'));
+waits(2).then(() => {
+  console.log('I waited for 2 seconds');
+  return waits(1);
+});
