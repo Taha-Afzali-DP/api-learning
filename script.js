@@ -208,3 +208,4 @@ const waits = function (seconds) {
     setTimeout(resolve, seconds * 1000);
   });
 };
+waits(2);
