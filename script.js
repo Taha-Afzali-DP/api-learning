@@ -260,5 +260,3 @@ const whereAmI = function () {
       countriesContainer.style.opacity = 1;
     });
 };
-console.log(whereAmI(52.508, 13.381));
-console.log(whereAmI(30.28211, 57.03559));
