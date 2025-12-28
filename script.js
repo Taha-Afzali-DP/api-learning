@@ -203,6 +203,7 @@ const lotteryPromise = new Promise(function (resolve, reject) {
 lotteryPromise.then(res => console.log(res)).catch(err => console.Error(err));
 
 //TODO promisifying setTimeOut ::
+/*
 const waits = function (seconds) {
   return new Promise(function (resolve) {
     setTimeout(resolve, seconds * 1000);
@@ -217,7 +218,7 @@ waits(2)
 
 Promise.resolve('abc').then(x => console.log(x));
 Promise.reject('abc').catch(x => console.error(x));
-
+*/
 //*
 
 const getPosition = function () {
