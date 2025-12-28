@@ -230,3 +230,44 @@ const getPosition = function () {
   });
 };
 getPosition().then(pos => console.log(pos));
+
+const whereAmI = function () {
+  getPosition().then(pos => console.log(pos.coords));
+  return fetch(
+    `https://geocode.xyz/${lat},${lng}?geoit=json&auth=74488022537145152005x25148`
+  )
+    .then(response => {
+      if (!response.ok) throw new Error(`problem for API...${response.status}`);
+
+      return response.json();
+    })
+    .then(data => {
+      console.log(data);
+      console.log(`you are in ${data.city} in ${data.country}`);
+      return fetch(`https://restcountries.com/v3.1/name/${data.country}`);
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`${errMsg} ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      renderCountry(data[0]);
+    })
+    .catch(err => console.error(`${err.message}oppsss...TRY_AGAIN`))
+    .finally(() => {
+      countriesContainer.style.opacity = 1;
+    });
+};
+console.log(whereAmI(52.508, 13.381));
+console.log(whereAmI(30.28211, 57.03559));
+
+console.log('test start');
+setTimeout(() => console.log('0 second time out'), 0);
+Promise.resolve('resolved promise 1 ').then(res => console.log(res));
+Promise.resolve('resolved promise 2 ').then(res => {
+  for (let i = 0; i < 100; i++) {}
+  console.log(res);
+});
+console.log('test end');
