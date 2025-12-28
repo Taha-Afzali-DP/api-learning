@@ -224,7 +224,7 @@ const getPosition = function () {
   return new Promise(function (resolve, reject) {
     navigator.geolocation.getCurrentPosition(
       position => resolve(position),
-      err => console.error(err)
+      err => reject(err)
     );
   });
 };
