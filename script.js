@@ -190,6 +190,7 @@ Promise.resolve('resolved promise 2 ').then(res => {
 console.log('test end');
 */
 //TODO *** bullding promise ***
+/*
 const lotteryPromise = new Promise(function (resolve, reject) {
   console.log('lottery draw is happening 🔮');
   setTimeout(() => {
@@ -203,7 +204,7 @@ const lotteryPromise = new Promise(function (resolve, reject) {
 lotteryPromise.then(res => console.log(res)).catch(err => console.Error(err));
 
 //TODO promisifying setTimeOut ::
-/*
+
 const waits = function (seconds) {
   return new Promise(function (resolve) {
     setTimeout(resolve, seconds * 1000);
