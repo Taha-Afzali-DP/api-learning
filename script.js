@@ -217,3 +217,6 @@ waits(2)
 
 Promise.resolve('abc').then(x => console.log(x));
 Promise.reject('abc').catch(x => console.error(x));
+
+//*
+navigator.geolocation.getCurrentPosition();
