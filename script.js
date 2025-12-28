@@ -223,7 +223,7 @@ Promise.reject('abc').catch(x => console.error(x));
 const getPosition = function () {
   return new Promise(function (resolve, reject) {
     navigator.geolocation.getCurrentPosition(
-      position => console.log(position),
+      position => resolve(position),
       err => console.error(err)
     );
   });
