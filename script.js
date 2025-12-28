@@ -236,7 +236,7 @@ getPosition().then(pos => console.log(pos));
 const whereAmI = function () {
   getPosition()
     .then(pos => {
-      const { lat = latitude, lng = longitude } = pos.coords;
+      const { latitude: lat, longitude: lng } = pos.coords;
       return fetch(
         `https://geocode.xyz/${lat},${lng}?geoit=json&auth=74488022537145152005x25148`
       );
