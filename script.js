@@ -262,3 +262,4 @@ const whereAmI = function () {
       countriesContainer.style.opacity = 1;
     });
 };
+btn.addEventListener('click', whereAmI);
