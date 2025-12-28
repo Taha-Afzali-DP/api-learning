@@ -143,7 +143,7 @@ btn.addEventListener('click', function () {
   // getCountryData('cvfsz');
 });
 
-getCountryData('australia');
+// getCountryData('australia');
 //! API:curl 'https://geocode.xyz/51.50354,-0.12768?geoit=xml&auth=your_api_key'
 
 //! API-KEY: 74488022537145152005x25148
