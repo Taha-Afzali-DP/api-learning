@@ -219,4 +219,7 @@ Promise.resolve('abc').then(x => console.log(x));
 Promise.reject('abc').catch(x => console.error(x));
 
 //*
-navigator.geolocation.getCurrentPosition();
+navigator.geolocation.getCurrentPosition(
+  position => console.log(position),
+  err => console.log(err)
+);
