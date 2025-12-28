@@ -221,5 +221,5 @@ Promise.reject('abc').catch(x => console.error(x));
 //*
 navigator.geolocation.getCurrentPosition(
   position => console.log(position),
-  err => console.log(err)
+  err => console.error(err)
 );
