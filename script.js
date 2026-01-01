@@ -271,8 +271,11 @@ btn.addEventListener('click', whereAmI);
 
 //! async function ::
 const whereAmI = async function (country) {
+  const {} = await getPosition();
   const res = await fetch(`https://restcountries.com/v3.1/name/${country}`);
-  console.log(res);
+  const data = await res.json();
+  console.log(data);
+  renderCountry(data[0]);
 };
 whereAmI('iran');
 console.log('FIRST');
