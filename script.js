@@ -232,7 +232,7 @@ const getPosition = function () {
   });
 };
 getPosition().then(pos => console.log(pos));
-
+/*
 const whereAmI = function () {
   getPosition()
     .then(pos => {
@@ -267,3 +267,6 @@ const whereAmI = function () {
     });
 };
 btn.addEventListener('click', whereAmI);
+*/
+
+//! assync function ::
