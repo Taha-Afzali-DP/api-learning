@@ -278,7 +278,9 @@ const whereAmI = async function (country) {
   );
   const dataGeo = await resGeo.json();
   console.log(dataGeo);
-  const res = await fetch(`https://restcountries.com/v3.1/name/${country}`);
+  const res = await fetch(
+    `https://restcountries.com/v3.1/name/${dataGeo.country}`
+  );
   const data = await res.json();
   console.log(data);
   renderCountry(data[0]);
