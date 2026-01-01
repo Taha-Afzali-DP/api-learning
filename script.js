@@ -270,3 +270,4 @@ btn.addEventListener('click', whereAmI);
 */
 
 //! assync function ::
+const whereAmI = function (cuontry) {};
