@@ -270,29 +270,32 @@ btn.addEventListener('click', whereAmI);
 */
 
 //! async function ::
-/*
 const whereAmI = async function () {
-  const pos = await getPosition();
-  const { latitude: lat, longitude: lng } = pos.coords;
-  const resGeo = await fetch(
-    `https://geocode.xyz/${lat},${lng}?geoit=json&auth=74488022537145152005x25148`
-  );
-  const dataGeo = await resGeo.json();
-  console.log(dataGeo);
-  const res = await fetch(
-    `https://restcountries.com/v3.1/name/${dataGeo.country}`
-  );
-  const data = await res.json();
-  console.log(data);
-  renderCountry(data[0]);
+  try {
+    const pos = await getPosition();
+    const { latitude: lat, longitude: lng } = pos.coords;
+    const resGeo = await fetch(
+      `https://geocode.xyz/${lat},${lng}?geoit=json&auth=74488022537145152005x25148`
+    );
+    const dataGeo = await resGeo.json();
+    console.log(dataGeo);
+    const res = await fetch(
+      `https://restcountries.com/v3.1/name/${dataGeo.country}`
+    );
+    const data = await res.json();
+    console.log(data);
+    renderCountry(data[0]);
+  } catch (err) {
+    console.log(err.message);
+  }
 };
 whereAmI();
 console.log('FIRST');
-*/
-try {
-  let y = 10;
-  const x = 15;
-  x = 20;
-} catch (err) {
-  alert(err.message);
-}
+
+// try {
+//   let y = 10;
+//   const x = 15;
+//   x = 20;
+// } catch (err) {
+//   alert(err.message);
+// }
