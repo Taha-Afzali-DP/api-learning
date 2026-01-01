@@ -269,5 +269,5 @@ const whereAmI = function () {
 btn.addEventListener('click', whereAmI);
 */
 
-//! assync function ::
-const whereAmI = function (cuontry) {};
+//! async function ::
+const whereAmI = async function (cuontry) {};
