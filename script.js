@@ -277,12 +277,14 @@ const whereAmI = async function () {
     const resGeo = await fetch(
       `https://geocode.xyz/${lat},${lng}?geoit=json&auth=74488022537145152005x25148`
     );
-    if (!resGeo.ok) throw new Error('problem getting locaition');
+    if (!resGeo.ok) throw new Error('problem getting location');
     const dataGeo = await resGeo.json();
     console.log(dataGeo);
     const res = await fetch(
       `https://restcountries.com/v3.1/name/${dataGeo.country}`
     );
+    if (!res.ok) throw new Error('problem getting location');
+
     const data = await res.json();
     console.log(data);
     renderCountry(data[0]);
