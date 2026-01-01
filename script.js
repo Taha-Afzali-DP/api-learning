@@ -277,7 +277,7 @@ const whereAmI = async function () {
     const resGeo = await fetch(
       `https://geocode.xyz/${lat},${lng}?geoit=json&auth=74488022537145152005x25148`
     );
-    if (!resGeo.ok) throw new Error();
+    if (!resGeo.ok) throw new Error('problem getting locaition');
     const dataGeo = await resGeo.json();
     console.log(dataGeo);
     const res = await fetch(
