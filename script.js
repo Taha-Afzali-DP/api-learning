@@ -291,7 +291,7 @@ console.log('FIRST');
 */
 try {
   let y = 10;
-  let x = 15;
+  const x = 15;
   x = 20;
 } catch (err) {
   alert(err.message);
