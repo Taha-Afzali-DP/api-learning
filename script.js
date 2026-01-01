@@ -270,4 +270,6 @@ btn.addEventListener('click', whereAmI);
 */
 
 //! async function ::
-const whereAmI = async function (cuontry) {};
+const whereAmI = async function (country) {
+  await fetch(`https://restcountries.com/v3.1/name/${data.country}`);
+};
