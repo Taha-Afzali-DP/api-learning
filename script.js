@@ -276,7 +276,7 @@ const whereAmI = async function (country) {
   const resGeo = await fetch(
     `https://geocode.xyz/${lat},${lng}?geoit=json&auth=74488022537145152005x25148`
   );
-  resGeo.json();
+  const dataGeo = await resGeo.json();
   const res = await fetch(`https://restcountries.com/v3.1/name/${country}`);
   const data = await res.json();
   console.log(data);
