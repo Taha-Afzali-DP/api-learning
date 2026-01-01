@@ -270,6 +270,7 @@ btn.addEventListener('click', whereAmI);
 */
 
 //! async function ::
+/*
 const whereAmI = async function () {
   const pos = await getPosition();
   const { latitude: lat, longitude: lng } = pos.coords;
@@ -287,3 +288,11 @@ const whereAmI = async function () {
 };
 whereAmI();
 console.log('FIRST');
+*/
+try {
+  let y = 10;
+  let x = 15;
+  x = 20;
+} catch (err) {
+  alert(err.message);
+}
