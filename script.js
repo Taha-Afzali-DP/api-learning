@@ -270,7 +270,7 @@ btn.addEventListener('click', whereAmI);
 */
 
 //! async function ::
-const whereAmI = async function (country) {
+const whereAmI = async function () {
   const pos = await getPosition();
   const { latitude: lat, longitude: lng } = pos.coords;
   const resGeo = await fetch(
@@ -285,5 +285,5 @@ const whereAmI = async function (country) {
   console.log(data);
   renderCountry(data[0]);
 };
-whereAmI('iran');
+whereAmI();
 console.log('FIRST');
