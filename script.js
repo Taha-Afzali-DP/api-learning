@@ -327,7 +327,7 @@ const get3Countries = async function (c1, c2, c3) {
       getJSON(`https://restcountries.com/v3.1/name/${c2}`),
       getJSON(`https://restcountries.com/v3.1/name/${c3}`),
     ]);
-    console.log([data.capital]);
+    console.log([data]);
   } catch (err) {
     console.error(err);
   }
