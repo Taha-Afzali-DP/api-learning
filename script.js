@@ -322,7 +322,7 @@ const get3Countries = async function (c1, c2, c3) {
     // const [data1] = await getJSON(`https://restcountries.com/v3.1/name/${c1}`);
     // const [data2] = await getJSON(`https://restcountries.com/v3.1/name/${c2}`);
     // const [data3] = await getJSON(`https://restcountries.com/v3.1/name/${c3}`);
-    const data = Promise.all([
+    const data = await Promise.all([
       getJSON(`https://restcountries.com/v3.1/name/${c1}`),
       getJSON(`https://restcountries.com/v3.1/name/${c2}`),
       getJSON(`https://restcountries.com/v3.1/name/${c3}`),
