@@ -336,7 +336,7 @@ get3Countries('iran', 'iraq', 'france');
 
 //! Promise.race
 (async function () {
-  const res = Promise.race([
+  const res = await Promise.race([
     getJSON(`https://restcountries.com/v3.1/name/italy`),
     getJSON(`https://restcountries.com/v3.1/name/iran`),
     getJSON(`https://restcountries.com/v3.1/name/mexico`),
