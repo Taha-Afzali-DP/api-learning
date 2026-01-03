@@ -289,12 +289,13 @@ const whereAmI = async function () {
     return `you are in ${dataGeo.city},${dataGeo.country}`;
   } catch (err) {
     renderError(`somthing went worng ‼️ ${err.message}`);
+    throw err;
   }
 };
 console.log('1: will getting location');
 // const city = whereAmI();
 // console.log(city);
-whereAmI().then(city => console.log(city));
+whereAmI().then(city => console.log(`3: ${city}`));
 console.log('2: finished getting location');
 // try {
 //   let y = 10;
