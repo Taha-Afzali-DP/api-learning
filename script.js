@@ -317,4 +317,9 @@ whereAmI()
 //   alert(err.message);
 // }
 
-const get3Countries = async function (c1, c2, c3) {};
+const get3Countries = async function (c1, c2, c3) {
+  try {
+  } catch (err) {
+    console.error(err);
+  }
+};
