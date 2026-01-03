@@ -327,4 +327,4 @@ const get3Countries = async function (c1, c2, c3) {
     console.error(err);
   }
 };
-get3Countries('iran', 'iraq', 'usa');
+get3Countries('iran', 'iraq', 'france');
