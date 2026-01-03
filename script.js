@@ -279,14 +279,12 @@ const whereAmI = async function () {
     );
     if (!resGeo.ok) throw new Error('problem getting location');
     const dataGeo = await resGeo.json();
-    console.log(dataGeo);
     const res = await fetch(
       `https://restcountries.com/v3.1/name/${dataGeo.country}`
     );
     if (!res.ok) throw new Error('problem getting location');
 
     const data = await res.json();
-    console.log(data);
     renderCountry(data[0]);
   } catch (err) {
     renderError(`somthing went worng ‼️ ${err.message}`);
