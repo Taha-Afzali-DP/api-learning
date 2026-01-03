@@ -33,7 +33,7 @@ const countriesContainer = document.querySelector('.countries');
 //   });
 // };
 
-//TODO *** new ppart ***
+//TODO *** new part ***
 const renderCountry = function (data, className = '') {
   const html = `
       <article class="country ${className}">
@@ -319,6 +319,7 @@ whereAmI()
 
 const get3Countries = async function (c1, c2, c3) {
   try {
+    await getJSON();
   } catch (err) {
     console.error(err);
   }
