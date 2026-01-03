@@ -292,7 +292,8 @@ const whereAmI = async function () {
   }
 };
 console.log('1: will getting location');
-whereAmI();
+const city = whereAmI();
+console.log(city);
 console.log('2: finished getting location');
 
 // try {
