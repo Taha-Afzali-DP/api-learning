@@ -341,4 +341,5 @@ get3Countries('iran', 'iraq', 'france');
     getJSON(`https://restcountries.com/v3.1/name/iran`),
     getJSON(`https://restcountries.com/v3.1/name/mexico`)
   );
+  console.log(res[0]);
 });
