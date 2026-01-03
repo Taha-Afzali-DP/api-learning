@@ -224,14 +224,10 @@ Promise.reject('abc').catch(x => console.error(x));
 
 const getPosition = function () {
   return new Promise(function (resolve, reject) {
-    // navigator.geolocation.getCurrentPosition(
-    //   position => resolve(position),
-    //   err => reject(err)
-    // );
     navigator.geolocation.getCurrentPosition(resolve, reject);
   });
 };
-getPosition().then(pos => console.log(pos));
+
 /*
 const whereAmI = function () {
   getPosition()
@@ -268,10 +264,13 @@ const whereAmI = function () {
 };
 btn.addEventListener('click', whereAmI);
 */
+getPosition().then(pos => console.log(pos));
 
 //! async function ::
 const whereAmI = async function () {
   try {
+    getPosition().then(pos => console.log(pos));
+
     const pos = await getPosition();
     const { latitude: lat, longitude: lng } = pos.coords;
     const resGeo = await fetch(
@@ -295,8 +294,19 @@ const whereAmI = async function () {
 console.log('1: will getting location');
 // const city = whereAmI();
 // console.log(city);
-whereAmI().then(city => console.log(`3: ${city}`));
-console.log('2: finished getting location');
+whereAmI()
+  .then(city => console.log(`3: ${city}`))
+  .catch(err => console.error(`${err.message}oppsss...TRY_AGAIN`))
+  .finally(() => {
+    console.log('2: finished getting location');
+  });
+(function () {
+  try {
+    city => console.log(`3: ${city}`);
+  } catch (err) {
+    console.error(`${err.message}oppsss...TRY_AGAIN`);
+  }
+})();
 // try {
 //   let y = 10;
 //   const x = 15;
