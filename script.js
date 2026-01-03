@@ -361,3 +361,9 @@ Promise.allSettled([
   Promise.reject('ERROR'),
   Promise.resolve('Another success'),
 ]).then(res => console.log(res));
+//! Promise.any
+Promise.any([
+  Promise.resolve('Success'),
+  Promise.reject('ERROR'),
+  Promise.resolve('Another success'),
+]).then(res => console.log(res));
