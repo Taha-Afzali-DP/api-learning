@@ -300,9 +300,11 @@ whereAmI()
   .finally(() => {
     console.log('2: finished getting location');
   });
-(function () {
+(async function () {
   try {
-    city => console.log(`3: ${city}`);
+    const city = await whereAmI();
+    console.log(`3: ${city}`);
+    console.log('2: finished getting location');
   } catch (err) {
     console.error(`${err.message}oppsss...TRY_AGAIN`);
   }
