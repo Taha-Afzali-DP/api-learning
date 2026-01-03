@@ -292,10 +292,10 @@ const whereAmI = async function () {
   }
 };
 console.log('1: will getting location');
-const city = whereAmI();
-console.log(city);
+// const city = whereAmI();
+// console.log(city);
+whereAmI().then(data => data.json());
 console.log('2: finished getting location');
-
 // try {
 //   let y = 10;
 //   const x = 15;
