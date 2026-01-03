@@ -351,4 +351,6 @@ const timeout = function (sec) {
     }, sec * 1000);
   });
 };
-Promise.race(getJSON(`https://restcountries.com/v3.1/name/italy`), timeout(1));
+Promise.race(getJSON(`https://restcountries.com/v3.1/name/italy`), timeout(1))
+  .then(res => console.log(res[0]))
+  .catch(err => console.log(err));
