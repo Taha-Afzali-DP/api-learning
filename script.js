@@ -333,3 +333,5 @@ const get3Countries = async function (c1, c2, c3) {
   }
 };
 get3Countries('iran', 'iraq', 'france');
+
+//! Promise.race
