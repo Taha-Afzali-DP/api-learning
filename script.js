@@ -343,3 +343,11 @@ getPosition().then(pos => console.log(pos));
   ]);
   console.log(res[0]);
 })();
+
+const timeout = function (sec) {
+  return new Promise(function (_, reject) {
+    setTimeout(function () {
+      reject(new Error('request took too long!'));
+    }, sec * 1000);
+  });
+};
