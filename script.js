@@ -292,8 +292,9 @@ const whereAmI = async function () {
     renderError(`somthing went worng ‼️ ${err.message}`);
   }
 };
+console.log('1: will getting location');
 whereAmI();
-console.log('FIRST');
+console.log('2: finished getting location');
 
 // try {
 //   let y = 10;
