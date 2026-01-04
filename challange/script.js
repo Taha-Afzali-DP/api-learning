@@ -57,7 +57,9 @@ createImage('./img/img-1.jpg')
   });
 const loadNpouse = async function () {
   try {
-    const img1 = createImage('./img/img-1.jpg');
+    // loaded img 1
+    let img1 = createImage('./img/img-1.jpg');
+    console.log('load image 1');
   } catch (error) {
     console.log(error);
   }
