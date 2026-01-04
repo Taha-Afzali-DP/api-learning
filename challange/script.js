@@ -68,6 +68,7 @@ const loadNpouse = async function () {
     await wait(2);
     img.style.display = 'none';
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
+loadNpouse();
