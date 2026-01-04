@@ -62,9 +62,11 @@ const loadNpouse = async function () {
     console.log('load image 1');
     await wait(2);
     img.style.display = 'none';
+    // loaded img 2
     img = await createImage('./img/img-2.jpg');
     console.log('load image 2');
     await wait(2);
+    img.style.display = 'none';
   } catch (error) {
     console.log(error);
   }
