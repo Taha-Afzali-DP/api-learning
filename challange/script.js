@@ -74,3 +74,9 @@ const loadNpouse = async function () {
 loadNpouse();
 
 //TODO new Part for challange ::
+const loadAll = async function (imgArr) {
+  try {
+  } catch (error) {
+    console.error(error);
+  }
+};
