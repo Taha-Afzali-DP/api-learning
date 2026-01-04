@@ -76,7 +76,8 @@ loadNpouse();
 //TODO new Part for challange ::
 const loadAll = async function (imgArr) {
   try {
-    const img = imgArr.map(async img => await createImage(img));
+    const imgs = imgArr.map(async img => await createImage(img));
+    console.log(imgs);
   } catch (error) {
     console.error(error);
   }
