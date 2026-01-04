@@ -55,3 +55,10 @@ createImage('./img/img-1.jpg')
 
     imageContainer.innerHTML = `<p style="color: red;">${err.message}</p>`;
   });
+const loadNpouse = async function () {
+  try {
+    const img1 = createImage('./img/img-1.jpg');
+  } catch (error) {
+    console.log(error);
+  }
+};
