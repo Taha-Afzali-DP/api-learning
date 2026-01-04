@@ -58,9 +58,10 @@ createImage('./img/img-1.jpg')
 const loadNpouse = async function () {
   try {
     // loaded img 1
-    let img1 = await createImage('./img/img-1.jpg');
+    let img = await createImage('./img/img-1.jpg');
     console.log('load image 1');
     await wait(2);
+    img.style.display = 'none';
   } catch (error) {
     console.log(error);
   }
