@@ -4,25 +4,25 @@ const wait = function (seconds) {
   return new Promise(resolve => setTimeout(resolve, seconds * 1000));
 };
 
-// const imageContainer = document.querySelector('.images');
+const imageContainer = document.querySelector('.images');
 
-// function createImage(url) {
-//   return new Promise((resolve, reject) => {
-//     const img = new Image();
+function createImage(url) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
 
-//     img.addEventListener('load', function () {
-//       imageContainer.appendChild(img);
-//       resolve(img);
-//     });
+    img.addEventListener('load', function () {
+      imageContainer.appendChild(img);
+      resolve(img);
+    });
 
-//     img.addEventListener('error', function () {
-//       reject(new Error(`عکس یافت نشد: ${url}`));
-//     });
+    img.addEventListener('error', function () {
+      reject(new Error(`عکس یافت نشد: ${url}`));
+    });
 
-//     img.src = url;
-//     img.alt = 'Loaded image';
-//   });
-// }
+    img.src = url;
+    img.alt = 'Loaded image';
+  });
+}
 
 // let currentImage;
 
