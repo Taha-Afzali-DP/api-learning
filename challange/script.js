@@ -82,3 +82,4 @@ const loadAll = async function (imgArr) {
     console.error(error);
   }
 };
+loadAll(['./img/img-1.jpg', './img/img-2.jpg', './img/img-3.jpg']);
