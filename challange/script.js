@@ -77,8 +77,8 @@ loadNpouse();
 const loadAll = async function (imgArr) {
   try {
     const imgs = imgArr.map(async img => await createImage(img));
-    console.log(imgs);
     Promise.all(imgs);
+    console.log(imgs);
   } catch (error) {
     console.error(error);
   }
